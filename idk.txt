@@ -1,27 +1,109 @@
-TMUX CONF: https://github.com/gpakosz/.tmux
-ASDF: https://github.com/asdf-vm/asdf
-YADR: https://github.com/skwp/dotfiles  - Dependencies: Ruby
-sudo pacman -Sy zsh 
+#TMUX CONF: https://github.com/gpakosz/.tmux
+#ASDF: https://github.com/asdf-vm/asdf
+#YADR: https://github.com/skwp/dotfiles  - Dependencies: Ruby
+#sudo pacman -Sy zsh 
+#
+#
+#asdf:
+#clojure
+#elixir
+#erlang
+#golang
+#nodejs
+#ruby
+#rust
+#
+#fonts: Interface - Ubuntu Medium 11
+#Monospace - Hack Regular 11
+#Roboto Condensed 
+#Google Fonts
+#
+#Extensions: Just Perfection, GSCONECT, Dash to Panel, Arch Linux Updates #Indicator.
+
+#Responsiveness: https://rudd-o.com/linux-and-free-software/tales-from-#responsivenessland-why-linux-feels-slow-and-how-to-fix-that
+#
+#
+#ASDF PLUGINS 
+#
+asdf plugin-add clojure https://github.com/vic/asdf-clojure.git
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+#
+#
+#ATTENTION !!! COPIED FROM THE FABIO AKITA'S BLOG POST (ARCH LINUX - BEST #DISTRO EVER?) CREDITS: https://www.akitaonrails.com/2017/01/10/arch-linux-#best-distro-ever
 
 
-asdf:
-clojure
-elixir
-erlang
-golang
-nodejs
-php
-ruby
-rust
 
-fonts: Interface - Ubuntu Medium 11
-Monospace - Hack Regular 11
-Roboto Condensed 
-Google Fonts
+# make sure you're up to date
+sudo pacman -Syu
 
-Extensions: Just Perfection, GSCONECT, Dash to Panel, Arch Linux Updates Indicator.
+# install multimedia codecs
+sudo pacman -Sy gstreamer0.10-plugins
+sudo pacman -Sy exfat-utils fuse-exfat a52dec faac faad2 flac jasper lame libdca libdv gst-libav libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore gstreamer0.10-plugins flashplugin libdvdcss libdvdread libdvdnav gecko-mediaplayer dvd+rw-tools dvdauthor dvgrab pulseaudio-equalizer-
 
-Responsiveness: https://rudd-o.com/linux-and-free-software/tales-from-responsivenessland-why-linux-feels-slow-and-how-to-fix-that
+# if you need japanese fonts like me
+sudo pacman -Sy adobe-source-han-sans-otc-fonts otf-ipafont
+
+# some components that you will need
+sudo pacman -Sy fuse-exfat 
+
+# I personally like the Numix theme and Breeze Icons, change them with the Tweak Tool
+sudo pacman -Sy numix-themes breeze-icons 
+
+# Ifnstall more good looking fonts
+sudo pacman -Sy ttf-dejavu 
+yay -S ttf-ms-fonts ttf-vista-fonts ttf-liberation adobe-source-sans-pro-fonts ttf-ubuntu-font-family
+
+# Firefox and Java plugin
+sudo pacman -Sy icedtea-web firefox
+
+# for devs
+sudo pacman -Sy zsh the_silver_searcher gvim imagemagick htop
+yay -Sy ttf-hack
+
+# Native wrapper for Web apps such as Slack, Hangout, etc
+yay -Sy franz-bin
+
+# Best native Twitter client for Linux
+yay -Sy corebird
+
+# No need to explain
+yay -Sy spotify
+yay -Sy sublime-text-dev # install these plugins https://www.hongkiat.com/blog/sublime-text-plugins/
+
+# If you like to read RSS
+yay -Sy feedreader-beta
+
+# if you need Office-like support
+sudo pacman -Sy libreoffice-fresh
+
+# if you need Photoshop-like support
+sudo pacman -Sy gimp
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/doctormo/GimpPs/master/tools/install.sh)"
+
+# if you want a really good video editor
+sudo pacman -Sy frei0r-plugins dvdauthor vlc
+yay -Sy kdenlive
+
+# this can make CPU-intensive software to behave better and guarantee better user experience
+yay -Sy ananicy-git
+
+# dropbox is the most horrible piece of software, but you may need it:
+yay -Sy dropbox dropbox-cli nautilus-dropbox
+
+#ALSO COPIED FROM THERE
+
+sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+touch ~/.vimrc.before
+touch ~/.vimrc.after
+echo "let g:yadr_using_unsolarized_terminal = 1" >> ~/.vimrc.before
+echo "let g:yadr_disable_solarized_enhancements = 1" >> ~/.vimrc.after
+echo "colorscheme gruvbox" >> ~/.vimrc.after
+
 
 
 
