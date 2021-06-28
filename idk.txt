@@ -1,0 +1,27 @@
+TMUX CONF: https://github.com/gpakosz/.tmux
+ASDF: https://github.com/asdf-vm/asdf
+YADR: https://github.com/skwp/dotfiles  - Dependencies: Ruby
+sudo pacman -Sy zsh 
+
+
+asdf:
+clojure
+elixir
+erlang
+golang
+nodejs
+php
+ruby
+rust
+
+fonts: Interface - Ubuntu Medium 11
+Monospace - Hack Regular 11
+Roboto Condensed 
+Google Fonts
+
+Extensions: Just Perfection, GSCONECT, Dash to Panel, Arch Linux Updates Indicator.
+
+Responsiveness: https://rudd-o.com/linux-and-free-software/tales-from-responsivenessland-why-linux-feels-slow-and-how-to-fix-that
+
+
+
